@@ -1,6 +1,8 @@
 import React from 'react';
 import {
   ChakraProvider,
+  Button,
+  ButtonGroup,
   Box,
   Text,
   Link,
@@ -11,6 +13,7 @@ import {
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
+import { FcAlarmClock } from 'react-icons/fc';
 
 function App() {
   return (
@@ -33,8 +36,12 @@ function App() {
               Learn Chakra
             </Link>
           </VStack>
+          <Box>
+            <Button leftIcon={<FcAlarmClock />} variant='outline'>Hello, World!</Button>
+          </Box>
         </Grid>
       </Box>
+
     </ChakraProvider>
   );
 }
